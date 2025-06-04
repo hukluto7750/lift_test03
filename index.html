@@ -10,17 +10,11 @@
   </style>
 </head>
 <body>
-  <!-- <button id="btnShare" onclick="sendShare()">Share Target Picker</button>
-  <button id="btnLogin" onclick="liff.login()">Log In</button>
-  <button id="btnLogOut" onclick="logOut()">Log Out</button> -->
-  <script>
-  liff.login();
-  sendShare();</script>
+
   <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <script>
-    // async function sendShare() {
+ 
   function sendShare() {
-    //   const result = await liff.shareTargetPicker([
       const result = liff.shareTargetPicker([
         {
           "type": "flex",
@@ -881,15 +875,12 @@
       liff.logout()
       window.location.reload()
     }
-    async function main() {
-      await liff.init({ liffId: "2007523880-3derL8P1" })
+    function main() {
+      liff.init({ liffId: "2007523880-3derL8P1" })
       if (liff.isLoggedIn()) {
-        // document.getElementById("btnShare").style.display = "block"
-        // if (!liff.isInClient()) {
-        //   document.getElementById("btnLogOut").style.display = "block"
-        // }
+  
       } else {
-        // document.getElementById("btnLogin").style.display = "block"
+    
       }
     }
     main()
