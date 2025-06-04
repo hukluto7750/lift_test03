@@ -139,7 +139,7 @@
       await liff.init({ liffId: "2007523880-3derL8P1" })
       if (liff.isLoggedIn()) {
         document.getElementById("btnShare").style.display = "block"
-        if (!liff.isInClient()) {
+        if (liff.isInClient()) {
           document.getElementById("btnLogOut").style.display = "block"
         }
       } else {
