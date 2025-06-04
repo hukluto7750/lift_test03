@@ -875,10 +875,12 @@
       liff.logout()
       window.location.reload()
     }
+    liff.login();
+    
     function main() {
       liff.init({ liffId: "2007523880-3derL8P1" })
       if (liff.isLoggedIn()) {
-  
+        sendShare();
       } else {
     
       }
