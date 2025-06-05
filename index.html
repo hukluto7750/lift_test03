@@ -435,6 +435,7 @@
       
       if (liff.isLoggedIn()) {
         sendShare()
+        liff.closeWindow()
         document.getElementById("btnShare").style.display = "block"
         if (!liff.isInClient()) {
           document.getElementById("btnLogOut").style.display = "block"
