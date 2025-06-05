@@ -135,18 +135,30 @@
       liff.logout()
       window.location.reload()
     }
-    async function main() {
-      await liff.init({ liffId: "2007523880-3derL8P1" })
-      if (liff.isLoggedIn()) {
-        document.getElementById("btnShare").style.display = "block"
-        if (liff.isInClient()) {
-          document.getElementById("btnLogOut").style.display = "block"
-        }
-      } else {
-        document.getElementById("btnLogin").style.display = "block"
-      }
-    }
-    main()
+    // async function main() {
+    //   await liff.init({ liffId: "2007523880-3derL8P1" })
+    //   if (liff.isLoggedIn()) {
+    //     document.getElementById("btnShare").style.display = "block"
+    //     if (!liff.isInClient()) {
+    //       document.getElementById("btnLogOut").style.display = "block"
+    //     }
+    //   } else {
+    //     document.getElementById("btnLogin").style.display = "block"
+    //   }
+    // }
+    // main()
+
+  liff
+  .init({
+    liffId: "2007523880-3derL8P1", // Use own liffId
+  })
+  .then(() => {
+    liff.login()
+    // Redirect to another page after the returned Promise object has been resolved
+    // location.assign("https://tw.yahoo.com/")    
+    // alert('test')
+    shareTargetPicker()
+  });
   </script>
 </body>
 </html>
