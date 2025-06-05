@@ -20,7 +20,13 @@
         {
           "type": "flex",
           "altText": "Flex Message",
-          "contents":[
+          "contents": {
+            "type": "bubble",
+            "body": {
+              "type": "box",
+              "layout": "vertical",
+              "spacing": "md",
+              "contents": [
                 {
                   "type": "text",
                   "text": "BROWN'S ADVENTURE",
@@ -106,6 +112,8 @@
                   ]
                 }
               ]
+            }
+          }
         }
       ])
       if (result) {
