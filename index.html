@@ -16,9 +16,11 @@
   <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <script>
     async function sendShare() {
-      const result = await liff.shareTargetPicker({
-  "type": "carousel",
-  "contents": [
+      const result = await liff.shareTargetPicker([
+        {
+          "type": "flex",
+          "altText": "Flex Message",
+          "contents": [
     {
       "type": "bubble",
       "body": {
@@ -280,7 +282,8 @@
       }
     }
   ]
-})
+        }
+      ])
       if (result) {
         //alert(`[${result.status}] Message sent!`)
         liff.closeWindow();
