@@ -17,10 +17,9 @@
   <script>
     async function sendShare() {
       const result = await liff.shareTargetPicker([
-        {
-          "type": "flex",
-          "altText": "Flex Message",
-          "contents": [
+      {
+  "type": "carousel",
+  "contents": [
     {
       "type": "bubble",
       "body": {
@@ -1088,10 +1087,10 @@
       }
     }
   ]
-        }
+}
       ])
       if (result) {
-        //alert(`[${result.status}] Message sent!`)
+        alert(`[${result.status}] Message sent!`)
       } else {
         const [majorVer, minorVer, patchVer] = (liff.getLineVersion() || "").split('.');
 
