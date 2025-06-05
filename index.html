@@ -20,9 +20,7 @@
         {
           "type": "flex",
           "altText": "Flex Message",
-          "contents": {
-  "type": "carousel",
-  "contents": [
+          "contents": [
     {
       "type": "bubble",
       "body": {
@@ -1090,12 +1088,10 @@
       }
     }
   ]
-}
         }
       ])
       if (result) {
         alert(`[${result.status}] Message sent!`)
-        
       } else {
         const [majorVer, minorVer, patchVer] = (liff.getLineVersion() || "").split('.');
 
