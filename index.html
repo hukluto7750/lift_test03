@@ -412,7 +412,7 @@
         }
       ])
       if (result) {
-        alert(`[${result.status}] Message sent!`)
+        //alert(`[${result.status}] Message sent!`)
       } else {
         const [majorVer, minorVer, patchVer] = (liff.getLineVersion() || "").split('.');
 
@@ -432,6 +432,7 @@
     }
     async function main() {
       await liff.init({ liffId: "2007523880-3derL8P1" })
+      liff.login()
       if (liff.isLoggedIn()) {
         document.getElementById("btnShare").style.display = "block"
         if (!liff.isInClient()) {
