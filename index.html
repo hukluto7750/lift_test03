@@ -417,7 +417,7 @@
       await liff.init({ liffId: "2007523880-3derL8P1" })
       
       if (liff.isLoggedIn()) {
-        const result_get = sendShare()
+        const result_get = await sendShare()
         if(result_get){
           liff.closeWindow()
         }
