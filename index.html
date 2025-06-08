@@ -415,7 +415,7 @@
     }
     async function main() {
       
-      
+      await liff.login()
       
       if (liff.isLoggedIn()) {
         await sendShare()
@@ -432,8 +432,8 @@
         document.getElementById("btnLogin").style.display = "block"
       }
     }
-    await liff.init({ liffId: "2007523880-3derL8P1" })
-    await liff.login()
+    liff.init({ liffId: "2007523880-3derL8P1" })
+    
     main()
   </script>
 </body>
