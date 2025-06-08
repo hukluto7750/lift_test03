@@ -415,6 +415,7 @@
     }
     async function main() {
       await liff.init({ liffId: "2007523880-3derL8P1" })
+      await liff.login()
       
       if (liff.isLoggedIn()) {
         await sendShare()
